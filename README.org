@@ -7,7 +7,8 @@
 
   #"foo" ; "foo"
   #"foo~&bar" ; "foo
-              ; bar" (with a newline)
-  #"foo\
+              ; bar" (with a fresh line)
+  #"foo~
   bar" ; "foobar" (without a newline)
+  #"foo~~bar" ; "foo~bar" (with a tilde)
 #+end_src
