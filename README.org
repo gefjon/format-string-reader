@@ -1,0 +1,13 @@
+#+title: A reader macro for strings with ~CL:FORMAT~ syntax
+#+author: Phoebe Goldman
+
+#+begin_src lisp
+  (asdf:load-system "format-string-reader")
+  (named-readtables:in-readtable format-string-reader:format-string-readtable)
+
+  #"foo" ; "foo"
+  #"foo~&bar" ; "foo
+              ; bar" (with a newline)
+  #"foo\
+  bar" ; "foobar" (without a newline)
+#+end_src
